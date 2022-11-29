@@ -45,12 +45,12 @@ jobs:
           name: apk
       - name: Create Release
         id: create_release
-        uses: meeDamian/github-release@2.0
+        uses: ncipollo/release-action@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           tag: v1.1
           name: v1.1.${{ github.run_number }}
-          allow_override: true
+          allowUpdates: true
 #        uses: actions/create-release@v1
 #        env:
 #          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
