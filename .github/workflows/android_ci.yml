@@ -3,8 +3,8 @@ name: Android CI Build and Release
 on:
   push:
     branches: [ "master" ]
-    tags:
-      - "v*"
+#    tags:
+#      - "v*"
 
   pull_request:
     branches: [ "master" ]
@@ -45,12 +45,18 @@ jobs:
           name: apk
       - name: Create Release
         id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: v1.1.${{ github.run_number }}
-          release_name: ${{ github.event.repository.name }} v1.1.${{ github.run_number }}
+        uses: meeDamian/github-release@2.0
+          with:
+            token: ${{ secrets.GITHUB_TOKEN }}
+            tag: v1.1
+            name: v1.1.${{ github.run_number }}
+            allow_override: true
+#        uses: actions/create-release@v1
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#        with:
+#          tag_name: v1.1.${{ github.run_number }}
+#          release_name: ${{ github.event.repository.name }} v1.1.${{ github.run_number }}
       - name: Upload Release APK
         id: upload_release_asset
         uses: actions/upload-release-asset@v1.0.1
