@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_story_list"
+        android:icon="@drawable/ic_list"
+        android:title="@string/story_list" />
+
+    <item
+        android:id="@+id/navigation_story_maps"
+        android:icon="@drawable/ic_map"
+        android:title="@string/story_maps" />
+
+    <item
+        android:id="@+id/navigation_create_story_options"
+        android:icon="@drawable/ic_create_story"
+        android:title="@string/create_story" />
+
+    <item
+        android:id="@+id/navigation_more_menu"
+        android:icon="@drawable/ic_dashboard"
+        android:title="@string/more" />
+
+</menu>

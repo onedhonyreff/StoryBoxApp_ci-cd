@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.CreateStoryActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_create_photo"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:contentDescription="@string/story_illustration_image"
+                android:scaleType="centerCrop"
+                android:src="@drawable/default_image"
+                android:transitionName="image_detail" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-72dp"
+                android:layout_marginBottom="16dp"
+                android:gravity="end"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_pick_from_camera"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/bg_camera_feature"
+                    android:clickable="true"
+                    android:contentDescription="@string/take_pictures_with_camera"
+                    android:focusable="true"
+                    android:foreground="@drawable/fg_circle_button"
+                    android:padding="14dp"
+                    android:src="@drawable/ic_camera"
+                    app:tint="@color/light_gray"
+                    tools:ignore="UnusedAttribute" />
+
+                <ImageView
+                    android:id="@+id/iv_pick_from_gallery"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/bg_camera_feature"
+                    android:clickable="true"
+                    android:contentDescription="@string/take_pictures_from_files"
+                    android:focusable="true"
+                    android:foreground="@drawable/fg_circle_button"
+                    android:padding="14dp"
+                    android:src="@drawable/ic_folder"
+                    app:tint="@color/light_gray"
+                    tools:ignore="UnusedAttribute" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="16dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="4dp"
+                    android:layout_marginBottom="-20dp"
+                    android:background="@drawable/bg_name_detail_label"
+                    android:paddingHorizontal="16dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/poppins_bold"
+                        android:maxLines="1"
+                        android:text="@string/story_notes"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+                <EditText
+                    android:id="@+id/ed_add_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/form_field_cust"
+                    android:elevation="6dp"
+                    android:fontFamily="@font/poppins"
+                    android:gravity="top"
+                    android:hint="@string/story_notpad_hint"
+                    android:inputType="textMultiLine"
+                    android:minLines="8"
+                    android:paddingVertical="12dp"
+                    android:textSize="16sp"
+                    tools:ignore="Autofill" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:paddingHorizontal="4dp">
+
+                    <com.fikri.submissionstoryappbpai.custom_component.ButtonApp
+                        android:id="@+id/button_add"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:enabled="false"
+                        android:fontFamily="@font/poppins_medium"
+                        android:paddingStart="24dp"
+                        android:paddingEnd="24dp"
+                        android:text="@string/upload"
+                        android:textAllCaps="false" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_splash"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="-24dp"
+        android:layout_marginBottom="-24dp"
+        android:scaleX="0"
+        android:scaleY="0"
+        app:cardCornerRadius="1000dp"
+        app:cardElevation="10dp">
+
+        <View
+            android:id="@+id/vw_splash"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/primary" />
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

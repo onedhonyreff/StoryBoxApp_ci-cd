@@ -1,0 +1,366 @@
+# CreateStoryMapRepositoryTest
+[ When The postDataToServer Function Is Successful It Will Return Result and Not Null ]
+- Saat fungsi postDataToServer berhasil akan mengembalikan result dan tidak null
+1. Memastikan respon tidak null
+2. Respon berupa ResultWrapper.Success
+3. Status error sesuai yang dijarapkan
+4. Pesan respon sesuai dengan yang diharapkan
+
+[ When Fetching Map Setting, Data Is Not Null ]
+- Saat mengambil pengaturan peta data tidak null
+1. Memastikan fungsi getDataStoreStringValue terpanggil
+2. Data pengaturan peta tidak null
+3. Data pengaturan peta sesuai dengan yang diharapkan
+
+[ When Calling getAddressName It Will Do Reverse Geocoding and Not Null ]
+- Saat memanggil getAddressName akan melakukan reverse geocoding dan tidak null
+1. Memastikan hasil reverse geocoding tidak null
+2. Memastikan hasil reverse geocoding sesuai dengan yang diharapkan
+
+# CreateStoryRepositoryTest
+[ When The postDataToServer Function Is Successful It Will Return Result and Not Null ]
+- Saat fungsi postDataToServer berhasil akan mengembalikan result dan tidak null
+1. Memastikan respon tidak null
+2. Memastikan respon berupa ResultWrapper.Seccess
+3. Memastikan status error sesuai dengan yang diharapkan
+4. Memastikan pesan respon sesuai dengan yang diharapkan
+
+# DisplayConfigurationRepositoryTest
+[ When Fetching Theme Settings, The Return Data Will Match the Datastore ]
+- Saat mengambil pengaturan tema, data kembalian akan sesuai dengan datastore
+1. Memastikan fungsi getDataStoreBooleanValue terpanggil
+2. Memastikan kembalian pengaturan tema sesuai dengan yang diharapkan
+
+[ When Saving Theme Settings With Arguments DARK_MODE_KEY and True ]
+- Saat menyimpan pengaturan tema dengan argumen DARK_MODE_KEY dan True
+1. Memastikan fungsi saveDataStoreValue terpanggil
+
+[ When Fetching Map Settings, Data Is Not Null and The Return Data Will Match the Datastore ]
+- Saat mengambil pengaturan peta data tidak null dan data kembalian akan sesuai dengan datastore
+1. Memastikan fungsi getDataStoreStringValue terpanggil
+2. Memastikan kembalian pengaturan peta tidak null
+3. Memastikan kembalian pengaturan peta sesuai dengan yang diharapkan
+
+[ When Saving Map Settings With Arguments MAP_MODE_KEY and NIGHT_MODE ]
+- Saat menyimpan pengaturan peta dengan argumen MAP_MODE_KEY dan NIGHT_MODE
+1. Memastikan fungsi saveDataStoreValue terpanggil
+
+# HomeBottomNavRepositoryTest
+[ When clearDataBeforeLogout Will Call Session Data, storyDao and remoteKeysDao Functions ]
+- Saat clearDataBeforeLogout akan memanggil fungsi hapus data sesi, storyDao, dan remoteKeysDao
+1. Memastikan fungsi clearDataStore terpanggil
+2. Memastikan fungsi clearDataStore terpanggil 1 kali
+3. Memastikan fungsi deleteRemoteKeys terpanggil
+4. Memastikan fungsi deleteRemoteKeys terpanggil 1 kali
+5. Memastikan fungsi deleteAllBasicStory terpanggil
+6. Memastikan fungsi deleteAllBasicStory terpanggil 1 kali
+
+# LoginRepositoryTest
+[ The Login Function Will Return Result and Not Null ]
+- Fungsi login akan mengembalikan result dan tidak null
+1. Memastikan respon tidak null
+2. Memastikan respon berupa ResultWrapper.Success
+3. Memastikan userId dari respon sesuai dengan yang diharapkan
+4. Memastikan name dari response sesuai dengan yang diharapkan
+5. Memastikan token dari respon sesuai dengan yang diharapkan
+
+[ The Save Session Function Will Save Token, Session and Other Data ]
+- Fungsi save sesi akan menyimpan data token, sesi, dan lainnya
+1. Memastikan userId tersimpan
+2. Memastikan token tersimpan
+3. Memastikan name tersimpan
+4. Memastikan sesi tersimpan
+5. Memastikan last login tersimpan
+6. Memastikan userId yang tersimpan sesuai dengan yang diharapkan
+7. Memastikan token yang tersimpan sesuai dengan yang diharapkan
+8. Memastikan name yang tersimpan sesuai dengan yang diharapkan
+
+# MainActivityRepositoryTest
+[ Validation Will Succeed When There Is Session and Token ]
+- Validasi akan berhasil ketika terdapat sesi dan token
+1. Memastikan kembalian validasi sesi equal jika dibandingkan dengan nilai True
+2. Memastikan kembalian validasi bernilai True
+
+[ Validation Will Fail When Last Login Is More Than 3 Days ]
+- Validasi akan gagal ketika login terakhir lewat dari 3 hari
+1. Memastikan kembalian validasi sesi equal jika dibandingkan dengan nilai False
+2. Memastikan kembalian validasi bernilai False
+
+[ Validation Will Fail When There Is No Session or Token ]
+- Validasi akan gagal ketika tidak ada sesi ataupun token
+1. Memastikan kembalian validasi sesi equal jika dibandingkan dengan nilai False
+2. Memastikan kembalian validasi bernilai False
+
+[ When There Is a New Session Will Change the Difference Between the Last Login Day and Today to 0 ]
+- Saat ada sesi baru akan mengubah selisih hari terakhir login dengan hari ini menjadi 0
+1. Memastikan memperbarui sesi, data tersimpan dan sesuai dengan yang diharapkan
+
+[ The Theme Mode Will Match The Themes Stored in The Datastore ]
+- Mode tema akan sesuai dengan tema yang tersimpan pada datastore
+1. Memastikan kembalian pengaturan tema equal jika dibandingkan dengan nilai True
+
+# MapsStoryRepositoryTest
+[ When Fetching Map Story Data Will be Success And Not Null ]
+- Saat mengambil data map story akan success dan tidak null
+1. Memastikan respon berupa ResultWrapper.Success
+2. Memastikan respon tidak null
+3. Memastikan listStory dari respon tidak null
+4. Memastikan pesan respon sesuai dengan yang diharapkan
+5. Memastikan jumlah story dari respon sesuai dengan yang diharapkan
+
+[ When Fetching Map Settings, Data Is Not Null and The Return Data Will Match the Datastore ]
+- Saat mengambil pengaturan peta data tidak null dan data kembalian akan sesuai dengan datastore
+1. Memastikan fungsi getDataStoreStringValue terpanggil
+2. Memastikan kembalian pengaturan peta tidak null
+3. Memastikan kembalian pengaturan peta sesuai dengan yang diharapkan
+
+[ When Calling getAddressName It Will do Reverse Geocoding and Not Null ]
+- Saat memanggil getAddressName akan melakukan reverse geocoding dan tidak null
+1. Memastikan hasil reverse geocoding tidak null
+2. Memastikan hasil reverse geocoding sesuai dengan yang diharapkan
+
+# MoreMenuRepositoryTest
+[ When Fetching Username Data Is Not Null ]
+- Saat mengambil username data tidak null
+1. Memastikan fungsi getDataStoreStringValue terpanggil
+2. Memastikan data userName tidak null
+3. Memastikan data userName sesuai dengan yang diharapkan
+
+[ When Fetching The Last Login Date The Data is Not Null ]
+- Saat mengambil tanggal login terakhir data tidak null
+1. Memastikan fungsi getDataStoreStringValue terpanggil
+2. Memastikan data lastLoginDate tidak null
+3. Memastikan data lastLoginDate sesuai dengan yang diharapkan
+
+# RegisterRepositoryTest
+[ The Register Function Will Return Result and Not Null ]
+- Fungsi register akan mengembalikan result dan tidak null
+1. Mmemastikan respon register tidak null
+2. Memastikan respon berupa ResultWrapper.Success
+3. Memastikan status error dari respon sesuai dengan yang diharapkan
+4. Memastikan pesan dari respon sesuai dengan yang diharapkan
+
+# StoryRepositoryTest
+[ getToken Will Return Token Value in Datastore ]
+- getToken akan mengembalikan nilai token pada datastore
+1. Memastikan data token tidak null
+2. Memastikan data token sesuai dengan yang diharapkan
+
+[ getStoryCount Will Return The Number of Stories in The Database ]
+- getStoryCount akan mengembalikan jumlah story pada database
+1. Memastikan data jumalh story tidak null
+2. Memastikan data jumlah story sesuai dengan yang diharapkan
+
+[ getCurrentPagingSuccessCode Will Return Code From Datastore ]
+- getCurrentPagingSuccessCode akan mengembalikan kode dari datastore
+1. Memastikan data kode tidak null
+2. Memastikan data koed sesuai dengan yang diharapkan
+
+# MoreMenuViewModelTest
+[ When Fetching Username Will Call getUsername Function on Repository and Not Null ]
+- Saat mengambil username akan memanggil fungsi getUsername pada repositori dan tidak tidak Null
+1. Memastikan fungsi getUserName terpanggil
+2. Memastikan data kembalian userName tidak null
+3. Memastikan data kembalian userName sesuai dengan yang diharapkan
+
+[ When Fetching lastLogin It Will Call getActualLastLogin Function on Repository and Not Null ]
+- Saat mengambil lastLogin akan memanggil fungsi getActualLastLogin pada repositori dan tidak tidak Null
+1. Memastikan fungsi getActualLastLogin terpanggil
+2. Memastikan data kembalian lastLogin tidak null
+3. Memastikan data kembalian lastLogin sesuai dengan yang diharapkan
+
+# StoryListViewModelTest
+[ When Get Story Should Not Null and Return Success ]
+- Saat mengambil story maka tidak akan null dan return success
+1. Memastikan Paging Data tidak null
+2. Memastikan Paging Data sesuai dengan yang diharapkan
+3. Memastikan jumlah data pada Paging Data sesuai dengan yang diharapkan
+4. Memastikan id data pertama pada Paging Data sesuai dengan yang diharapkan
+
+[ When Fetching Story Count Will Call getStoryCount on Repository and Not Null ]
+- Saat mengambil jumlah story akan memanggil getStoryCount pada repositori dan tidak null
+1. Memastikan kembalian data jumlah data story tidak null
+2. Memsatikan kembalian data jumlah data story sesuai dengan yang diharapkan
+
+[ When Calling syncStoryListEmptyState Then showEmptyStoryMessage Will Suit the Situation ]
+- Saat memanggil syncStoryListEmptyState maka showEmptyStoryMessage akan sesuai situasi
+1. Memastikan kembalian data emptyStory tidak null
+2. Memastikan data emptyStory sesuai dengan yang diharapkan
+
+[ When Calling changeAdapterLoadingState With True Then adapterStillLoading Will be True ]
+- Saat memanggil changeAdapterLoadingState dengan True maka adapterStillLoading akan True
+1. Memastikan data isLoading bernilai True
+2. Mematikan data isLoading sesuai dengan yang diharapkan
+
+# StoryMapsViewModelTest
+[ Since This has Called the getMapStory Method on the Repository Changing Stories ]
+- Sejak ini telah memanggil method getMapStory pada repository mengubah stories
+1. Memastikan getMapStory terpanggil
+2. Memastikan data modal respon bertipe SUCCESS
+3. Memastikan pesan respon sesuai dengan yang diharapkan
+4. Memastikan data storie tidak null
+5. Memastikan jumlah story sesuai dengan yang diharapkan
+
+[ When doing reverseGeocoding It doesn't Return Null ]
+- Saat melakukan reverseGeocoding tidak mengembalikan null
+1. Memastikan fungsi getAddressName pada repositori terpanggil
+2. Memastikan data kembalian reverse geocoding tidak null
+3. Memastikan data kembalian reverse geocoding sesuai dengan yang diharapkan
+
+[ When Calling dismissRefreshModal Then isShowRefreshModal Becomes False ]
+- Saat memanggil dismissRefreshModal maka isShowRefreshModal menjadi false
+1. Memastikan data isShowRefreshModal equal jika dibandingkan dengan nilai False
+2. Memastikan data isShowRefreshModal bernilai False
+
+# CreateStoryMapViewModelTest
+[ When Uploading Story Will Call postDataToServer Function on Repository and Change Data After Success ]
+- Saat upload story akan memanggil fungsi postDataToServer pada repositori dan mengubah data setelah suskes
+1. Memastikan fungsi postDataToServer terpanggil
+2. Memastikan data responseType tidak null
+3. Memastikan data responseMessage tidak null
+4. Memastikan data responseType sesuai dengan yang diharapkan
+5. Memastikan data responseMessage sesuai dengan yang diharapkan
+6. Memastikan data isShowResponseModal bernilai True
+
+[ When Fetching the Map Mode It Will be MODE_NIGHT and Not Null ]
+- Saat mengambil mode peta akan bernilai MODE_NIGHT dan tidak null
+1. Memastikan data kembalian mode peta tidak null
+2. Memastikan data kembalian mode peta sesuai dengan yang diharapkan
+
+[ When doing reverseGeocoding It doesn't Return Null ]
+- Saat melakukan reverseGeocoding tidak mengembalikan null
+1. Memastikan kembalian reverse geocoding tidak null
+2. Memastikan kembalian reverse geocoding sesuai dengan yang diharapkan
+
+[ When Calling the Photo Bitmap Set Will Change the Photos Bitmap Value ]
+- Saat memanggil setPhotoBitmap akan mengubah nilai photoBitmap
+1. Memastikan data bitmap foto tidak null
+2. Memastikan data bitmap foto sama
+3. Memastikan data bitmap foto sesuai dengan yang diharapkan
+
+[ When Enabling AddButton Will Change isAddButtonEnabled To True ]
+- Saat mengaktifkan AddButton akan mengubah isAddButtonEnabled menjadi true
+1. Memastikan data enable button bernilai True
+2. Memastikan nilai data enable sesuai dengan yang diharapkan 
+
+[ When Calling dismissRefreshModal Then isShowRefreshModal Becomes False ]
+- Saat memanggil dismissRefreshModal maka isShowRefreshModal menjadi false
+1. Memastikan data isShowRefreshModal equal jika dibandingkan dengan nilai False
+2. Memastikan data isShowRefreshModal sesuai dengan yang diharapkan
+
+[ When Calling dismissResponseModal Then isShowResponseModal Becomes False ]
+- Saat memanggil dismissResponseModal maka isShowResponseModal menjadi false
+1. Memastikan data isShowResponseModal equal jika dibandingkan dengan nilai False
+2. Memastikan data isShowResponseModal Sesuai dengan yang diharapkan
+
+# CreateStoryViewModelTest
+[ When Uploading Story Will Call postDataToServer Function on Repository and Change Data After Success ]
+- Saat upload story akan memanggil fungsi postDataToServer pada repositori dan mengubah data setelah suskes
+1. Memastikan fungsi postDataToServer terpanggil
+2. Memastikan data responseType tidak null
+3. Memastikan data responseMessage tidak null
+4. Memastikan data responseType sesuai dengan yang diharapkan
+5. Memastikan data responseMessage sesuai dengan yang diharapkan
+6. Memastikan data isShowResponseModal bernilai True
+
+[ When Calling the Photo Bitmap Set Will Change the Photos Bitmap Value ]
+- Saat memanggil setPhotoBitmap akan mengubah nilai photoBitmap
+1. Memastikan data bitmap tidak null
+2. Memastikan data bitmap sama
+3. Memastikan data bitmap sesuai dengan yang diharapkan
+
+[ When Enabling AddButton Will Change isAddButtonEnabled to True ]
+- Saat mengaktifkan AddButton akan mengubah isAddButtonEnabled menjadi true
+1. Memastikan data isEnable button bernilai True
+2. Memastikan data isEnable button sesuai dengan yang diharapkan
+
+[ When Calling dismissRefreshModal Then isShowRefreshModal Becomes False ]
+- Saat memanggil dismissRefreshModal maka isShowRefreshModal menjadi false
+1. Memastikan data isShowRefreshModal equal jika dibandingkan dengan nilai False
+2. Memastikan data isShowRefreshModal bernilai False
+
+[ When Calling dismissResponseModal Then isShowResponseModal Becomes False ]
+- Saat memanggil dismissResponseModal maka isShowResponseModal menjadi false
+1. Memastikan nilai isShowResponseModal equal jika dibandingkan dengan nilai False
+2. Memastikan nilai isShowResponseModal bernilai False
+
+# DisplayConfigurationViewModelTest
+[ When Fetching Theme Settings Will Call Get Theme Setting Function on Repository ]
+- Saat mengambil pengaturan tema akan memanggil fungsi getThemeSetting pada repositori
+1. Memastikan fungsi getThemeSetting terpanggil
+2. Memastikan data kembalian pengaturan tema sesuai dengan yang diharapkan
+
+[ When Saving the Theme Will Call The saveThemeSetting Function on the Repository ]
+- Saat menyimpan tema akan memanggil fungsi saveThemeSetting pada repositori
+1. Memastikan fungsi saveThemeSetting terpanggil
+2. Memastikan fungsi saveThemeSetting terpanggil 1 kali
+
+[ When Fetching Map Settings Will Call getMapMode Function on Repository ]
+- Saat mengambil pengaturan peta akan memanggil fungsi getMapMode pada repositori
+1. Memastikan fungsi getMapMode terpanggil
+2. Memastikan data kembalian mode map sesuai dengan yang diharapkan
+
+[ When Saving the Map Mode Will Call the safeModeFunction on the Repository ]
+- Saat menyimpan mode map akan memanggil fungsi saveMapMode pada repositori
+1. Memastikan fungsi saveMapMode terpanggil
+2. Memastikan fungsi saveMapMode terpanggil 1 kali
+
+# HomeBottomNavViewModelTest
+[ When Changing the Header Icon Will Change the Value of the headerIcon ]
+- Saat mengubah icon header akan mengganti nilai headerIcon
+1. Memastikan data icon sesuai dengan yang diharapkan
+
+[ When Clearing Session Data Will Call Clear DataStore on Repository ]
+- Saat menghapus data sesi akan menamggil clearDataStore pada repositori
+1. Memastikan fungsi clearDataBeforeLogout terpanggil
+2. Memastikan fungsi clearDataBeforeLogout terpanggil 1 kali
+
+# LoginViewModelTest
+[ When Login is Successful It Will Save the Session and the Instructions to Home Change to True ]
+- Saat login berhasil akan menyimpan sesi dan instruksi menuju home menjadi True
+1. Memastikan fungsi login terpanggil
+2. Memastikan fungsi saveLoginData terpanggil
+3. Memastikan respon login sama
+4. Memastikan data isTimeToHome sesuai dengan yang dihrapkan
+
+[ When Executing the dismissResponseModal Method, isShowingResponseModal Becomes False ]
+- Saat menjalankan method dismissResponseModal maka isShowingResponseModal menjadi false
+1. Memastikan data isShowingResponseModal equal jika dibandingkan dengan nilai False
+2. Memastikan data isShowingResponseModal bernilai False
+
+# MainActivityViewModelTest
+[ When Fetching the Dark Theme Configuration According to the Repository Returns ]
+- Saat mengambil konfigurasi tema gelap sesuai dengan kembalian repositori
+1. Memastikan fungsi getThemeSettings terpanggil
+2. Memastikan data kembalian pengaturan tema gelap sesuai dengan yang diharapkan
+
+[ The First Time Initialization Will Change the isTimeOut Variable to True ]
+- Saat pertama inisialisasi akan mengubah variabel isTimeOut menjadi True
+1. Memastikan data isTimeOut sesuai dengan yang diharapkan
+
+[ When Checking the Session Will Call the Validation Function and Change the isValidSession Variable ]
+- Saat mengecek sesi akan memanggil fungsi validasi dan mengubah variabel isValidSession
+1. Memastikan fungsi validatingLoginSession terpanggil
+2. Memastikan data kembalian validasi sesi sesuai dengan yang diharapkan
+
+[ When Saving Session Will Call saveCurrentSession Function Once on Repository ]
+- Saat menyimpan sesi akan memanggil fungsi saveCurrentSession satu kali pada repositori
+1. Memastikan fungsi saveCurrentSession terpanggil dan hanya terpanggil 1 kali
+
+# RegisterViewModelTest
+[ When Registration is Successful, a Modal Response Will Appear and the Response Type Will be Successful ]
+- Saat registrasi berhasil akan memunculkan response modal dan tipe response menjadi sukses
+1. Memastikan fungsi register terpanggil
+2. Memsatikan pesan dari respon login sesuai dengan yang diharapkan
+3. Memastikan tipe respon login sesuai dengan yang diharpakan
+4. Memastikan data isShowResponseModal sesuai dengan yang diharapkan
+
+[ When Executing the dismissResponseModal Method, isShowingResponseModal Becomes False ]
+- Saat menjalankan method dismissResponseModal maka isShowingResponseModal menjadi false
+1. Memastikan data isShowResponseModal equal jika dibandingkan dengan nilai False
+2. Memastikan data isShowResponseModal bernilai False
+
+(Remote Mediator) [ Refresh Load Returns Success Result When More Data Is Present ]
+- Refresh load mengembalikan hasil sukses ketika ada data yang didapat
+1. Memastikan hasil berupa RemoteMediator.MediatorResult.Success
+2. Memastikan status mencapai data akhir bernilai False 

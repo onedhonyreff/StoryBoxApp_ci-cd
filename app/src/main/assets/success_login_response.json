@@ -1,0 +1,9 @@
+{
+  "error": false,
+  "message": "success",
+  "loginResult": {
+    "userId": "user-FgGwllRGOI2HqhAg",
+    "name": "Dakocan",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1c2VyLUZnR3dsbFJHT0kySHFoQWciLCJpYXQiOjE2NjY5MjEwMzZ9.TPwBoGZLrFcVIbQWqTWNyvCkp--z4WfY_P7oGsEYlyw"
+  }
+}

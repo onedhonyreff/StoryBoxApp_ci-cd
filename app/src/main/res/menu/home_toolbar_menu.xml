@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:menuCategory="container">
+        <item
+            android:id="@+id/action_change_language"
+            android:contentDescription="@string/change_language"
+            android:title="@string/change_language"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/action_logout"
+            android:contentDescription="@string/logout"
+            android:title="@string/logout"
+            app:showAsAction="never" />
+    </group>
+</menu>

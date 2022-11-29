@@ -1,0 +1,45 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.SubmissionStoryAppBPAI" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/primary</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/secondary</item>
+        <item name="colorSecondaryVariant">@color/secondary</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/primary</item>
+        <!-- Customize your theme here. -->
+        <item name="android:textColorPrimary">@color/light_gray</item>
+        <item name="android:textColorSecondary">@color/tertiary</item>
+        <item name="android:textColorHighlight">@color/white</item>
+        <item name="android:fillColor">@color/secondary</item>
+        <item name="android:color">@color/gray_900</item>
+    </style>
+
+    <style name="BottomNavigationViewTextStyle">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textSize">12dp</item>
+    </style>
+
+    <style name="Theme.SubmissionStoryAppBPAI.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.SubmissionStoryAppBPAI.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="Theme.SubmissionStoryAppBPAI.AppWidgetContainerParent" parent="@android:style/Theme.DeviceDefault">
+        <!-- Radius of the outer bound of widgets to make the rounded corners -->
+        <item name="appWidgetRadius">16dp</item>
+        <!--
+        Radius of the inner view's bound of widgets to make the rounded corners.
+        It needs to be 8dp or less than the value of appWidgetRadius
+        -->
+        <item name="appWidgetInnerRadius">8dp</item>
+    </style>
+
+    <style name="Theme.SubmissionStoryAppBPAI.AppWidgetContainer" parent="Theme.SubmissionStoryAppBPAI.AppWidgetContainerParent">
+        <!-- Apply padding to avoid the content of the widget colliding with the rounded corners -->
+        <item name="appWidgetPadding">16dp</item>
+    </style>
+</resources>

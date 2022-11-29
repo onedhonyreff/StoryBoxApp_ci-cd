@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="500"
+        motion:autoTransition="animateToEnd"
+        motion:motionInterpolator="easeIn">
+       <KeyFrameSet>
+       </KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:layout_height="100dp"
+            motion:layout_constraintTop_toTopOf="@+id/iv_logo_frame"
+            motion:layout_constraintBottom_toBottomOf="@+id/iv_logo_frame"
+            android:layout_width="wrap_content"
+            android:id="@+id/iv_logo_text"
+            motion:layout_constraintStart_toEndOf="parent"
+            android:alpha="0.0" />
+        <Constraint
+            android:layout_height="100dp"
+            motion:layout_constraintStart_toStartOf="@+id/view"
+            motion:layout_constraintTop_toTopOf="@+id/view"
+            motion:layout_constraintBottom_toBottomOf="@+id/view"
+            motion:layout_constraintEnd_toEndOf="@+id/view"
+            android:layout_width="100dp"
+            android:id="@+id/iv_logo_frame" />
+        <Constraint
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:alpha="0.0"
+            android:layout_marginStart="41dp"
+            motion:layout_constraintTop_toTopOf="@+id/iv_logo_frame"
+            motion:layout_constraintStart_toStartOf="@+id/iv_logo_frame"
+            android:layout_marginTop="58dp"
+            android:id="@+id/iv_logo_spot" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:layout_height="100dp"
+            motion:layout_constraintTop_toTopOf="@+id/iv_logo_frame"
+            motion:layout_constraintBottom_toBottomOf="@+id/iv_logo_frame"
+            android:layout_width="wrap_content"
+            android:id="@+id/iv_logo_text"
+            android:alpha="0.0"
+            motion:layout_constraintStart_toEndOf="parent" />
+        <Constraint
+            android:layout_height="100dp"
+            motion:layout_constraintStart_toStartOf="@+id/view"
+            motion:layout_constraintTop_toTopOf="@+id/view"
+            motion:layout_constraintBottom_toBottomOf="@+id/view"
+            motion:layout_constraintEnd_toEndOf="@+id/view"
+            android:layout_width="100dp"
+            android:id="@+id/iv_logo_frame" />
+        <Constraint
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:alpha="0.0"
+            android:layout_marginStart="41dp"
+            motion:layout_constraintTop_toTopOf="@+id/iv_logo_frame"
+            motion:layout_constraintStart_toStartOf="@+id/iv_logo_frame"
+            android:layout_marginTop="58dp"
+            android:id="@+id/iv_logo_spot" />
+        <Constraint
+            motion:layout_constraintEnd_toEndOf="@+id/iv_logo_frame"
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:layout_marginEnd="20dp"
+            motion:layout_constraintTop_toTopOf="@+id/iv_logo_frame"
+            android:layout_marginTop="18dp"
+            android:id="@+id/iv_logo_feather" />
+    </ConstraintSet>
+    <ConstraintSet
+        android:id="@+id/fade_spot"
+        motion:deriveConstraintsFrom="@+id/end" >
+        <Constraint
+            android:id="@+id/iv_logo_feather"
+            motion:layout_constraintEnd_toEndOf="@+id/iv_logo_frame"
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:layout_marginEnd="15dp"
+            motion:layout_constraintTop_toTopOf="@+id/iv_logo_frame"
+            android:layout_marginTop="11dp" />
+        <Constraint
+            android:id="@+id/iv_logo_spot"
+            android:layout_width="wrap_content"
+            android:layout_height="12dp"
+            android:alpha="1"
+            android:layout_marginStart="36dp"
+            motion:layout_constraintTop_toTopOf="@+id/iv_logo_frame"
+            motion:layout_constraintStart_toStartOf="@+id/iv_logo_frame"
+            android:layout_marginTop="53dp" />
+    </ConstraintSet>
+    <Transition
+        motion:constraintSetStart="@+id/end"
+        motion:constraintSetEnd="@+id/fade_spot"
+        motion:autoTransition="animateToEnd"
+        motion:motionInterpolator="easeOut"
+        motion:duration="500" />
+    <ConstraintSet
+        android:id="@+id/fade_text"
+        motion:deriveConstraintsFrom="@+id/fade_spot" >
+        <Constraint
+            android:layout_height="100dp"
+            motion:layout_constraintTop_toTopOf="@+id/view"
+            motion:layout_constraintBottom_toBottomOf="@+id/view"
+            android:layout_width="100dp"
+            motion:layout_constraintStart_toStartOf="@+id/view"
+            android:id="@+id/iv_logo_frame"
+            android:layout_marginStart="32dp" />
+        <Constraint
+            android:layout_height="100dp"
+            motion:layout_constraintTop_toTopOf="@+id/iv_logo_frame"
+            motion:layout_constraintBottom_toBottomOf="@+id/iv_logo_frame"
+            android:layout_width="wrap_content"
+            android:id="@+id/iv_logo_text"
+            motion:layout_constraintEnd_toEndOf="@+id/view"
+            android:layout_marginEnd="32dp"
+            android:alpha="1.0" />
+    </ConstraintSet>
+    <Transition
+        motion:constraintSetStart="@+id/fade_spot"
+        motion:constraintSetEnd="@+id/fade_text"
+        motion:autoTransition="animateToEnd"
+        motion:motionInterpolator="easeIn"
+        motion:duration="500" />
+</MotionScene>
