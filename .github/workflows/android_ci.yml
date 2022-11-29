@@ -49,7 +49,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           tag: v1.1
-          name: ${{ github.event.repository.name }} v1.1.${{ github.run_number }}
+          name: ${{ github.event.repository.name }}
           allowUpdates: true
 #        uses: actions/create-release@v1
 #        env:
@@ -57,6 +57,14 @@ jobs:
 #        with:
 #          tag_name: v1.1.${{ github.run_number }}
 #          release_name: ${{ github.event.repository.name }} v1.1.${{ github.run_number }}
+      - name: Delete old release assets
+        uses: mknejp/delete-release-assets@v1
+        with:
+          token: ${{ github.token }}
+          tag: v1.1
+          assets: '*.apk'
+          fail-if-no-assets: false
+          fail-if-no-release: false
       - name: Upload Release APK
         id: upload_release_asset
         uses: actions/upload-release-asset@v1.0.1
